@@ -1,14 +1,14 @@
-def greeting (age=-1, name="нет имени", surname="нет фамили")
+def greeting (age, name, surname)
   if age < 18
     puts "Привет, #{name} #{surname}. Тебе меньше 18 лет,
-но начать учиться программировать никогда не рано "
+но начать учиться программировать никогда не рано"
   else
     puts "Привет, #{name} #{surname}. Самое время
 заняться делом!"
   end
 end
 
-def foobar(first_num =-1, second_num =-1)
+def foobar(first_num, second_num)
   if first_num==20 or second_num==20
     puts second_num
   else
