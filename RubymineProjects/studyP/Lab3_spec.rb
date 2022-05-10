@@ -1,6 +1,8 @@
+require 'rspec'
+
 def word_processor (word)
   if word[word.length-1] == "s" and word[word.length-2] == "c"
-    puts 2**word.length
+    return 2**word.length
   else
     i = word.length
     arr = [word.length]
@@ -10,7 +12,7 @@ def word_processor (word)
       arr[j] = word[i]
       j +=1
     end
-    puts arr.join()
+    return arr.join()
   end
 end
 
@@ -34,6 +36,11 @@ def pockemonArray()
   array.each { |hash| puts hash}
 end
 
-word = gets.chomp
-word_processor(word)
-pockemonArray()
+RSpec.describe "word_processor" do
+  it 'wp_correct_1st_way' do
+    expect(word_processor("Critics")).to eq(128)
+  end
+  it 'wp_correct_2nd_way' do
+    expect(word_processor("hello")).to eq("olleh")
+  end
+end
