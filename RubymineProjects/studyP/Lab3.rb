@@ -8,6 +8,7 @@ def word_processor (word)
       print word[i]
     end
   end
+  puts ""
 end
 
 def pockemonArray()
@@ -15,11 +16,20 @@ def pockemonArray()
   puts "Введите количество покемонов:"
   n = gets.to_i
   if n > 0
-    
+    for i in 1..n
+      puts "Введите имя покемона:"
+      name = gets.chomp
+      puts "Введите цвет покемона:"
+      color = gets.chomp
+      array.push({name: name, color: color})
+      n -=1
+    end
   else
-    puts "Число покемонов должно быть больше нуля"
+    puts "Число покемонов должно быть больше нуля!"
   end
+  array.each { |hash| puts hash}
 end
 
 word = gets.chomp
 word_processor(word)
+pockemonArray()
