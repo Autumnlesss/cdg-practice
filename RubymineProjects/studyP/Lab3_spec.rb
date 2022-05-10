@@ -16,7 +16,7 @@ def word_processor (word)
   end
 end
 
-def pockemonArray()
+def pockemon_array()
   array = []
   puts ""
   puts "Введите количество покемонов:"

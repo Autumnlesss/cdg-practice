@@ -14,7 +14,7 @@ def word_processor (word)
   end
 end
 
-def pockemonArray()
+def pockemon_array()
   array = []
   puts ""
   puts "Введите количество покемонов:"
@@ -36,4 +36,4 @@ end
 
 word = gets.chomp
 word_processor(word)
-pockemonArray()
+pockemon_array()
