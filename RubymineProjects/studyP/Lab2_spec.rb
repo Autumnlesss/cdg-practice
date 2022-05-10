@@ -23,7 +23,7 @@ RSpec.describe "greeting" do
     expect(greeting(18, "Илья", "Гагарин")).to eq("Привет, Илья Гагарин. Самое время
 заняться делом!")
     end
-    it 'greeting_wrong' do
+    it 'greeting_corect_2' do
       expect(greeting(17, "Илья", "Гагарин")).to eq("Привет, Илья Гагарин. Тебе меньше 18 лет,
 но начать учиться программировать никогда не рано")
     end
@@ -33,7 +33,7 @@ RSpec.describe "foobar" do
   it 'foobar_correct' do
     expect(foobar(20,10)).to eq(10)
   end
-  it 'foobar_wrong' do
+  it 'foobar_correct_2' do
     expect(foobar(10,10)).to eq(20)
   end
 end
