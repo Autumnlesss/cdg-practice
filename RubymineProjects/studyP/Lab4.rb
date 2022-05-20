@@ -43,4 +43,26 @@ def delete(name, id)
   File.delete(BUFFER) if File.exist?(BUFFER)
 end
 
+def int_argument_error?(*args)
+  begin
+    args.each do |arg|
+      arg = Integer (arg)
+    end
+  rescue  ArgumentError
+    true
+  else
+    false
+end
+end
 
+def float_arg_error?(*args)
+  begin
+    args.each do |arg|
+      arg = Float(arg)
+    end
+  rescue ArgumentError
+    true
+  else
+    false
+  end
+end
