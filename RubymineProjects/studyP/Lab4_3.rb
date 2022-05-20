@@ -13,8 +13,8 @@ def balance_options
     puts "W - Withdraw"
     puts "B - Balance"
     puts "Q - Quit"
-    cmd = gets.chomp
-    case cmd
+    command = gets.chomp
+    case command
     when "D","d"
       deposit
     when "W","w"
@@ -61,7 +61,7 @@ wd = input.to_f
 if wd <0 || wd > @balance
   puts "Withdraw value must be more than 0 and not greater than balance (#{@balance})"
 else
-  @balance = wd
+  @balance -= wd
 end
 @balance
 end

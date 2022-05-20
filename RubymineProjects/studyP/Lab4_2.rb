@@ -6,10 +6,6 @@ require 'fileutils'
 RESULTS = 'result.txt'
 STUDENTS = 'students.txt'
 
-def index(file)
-  File.foreach(file){|student| puts student}
-end
-
 def find_std_by_age
   File.truncate(RESULTS, 0)
   index(STUDENTS)

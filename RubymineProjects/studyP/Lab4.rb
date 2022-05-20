@@ -1,9 +1,8 @@
 STD_PATH = 'students.txt'
 BUFFER = 'buffer.txt'
-gem 'fileutils'
 
-def index
-  File.foreach(STD_PATH){|student| puts student}
+def index(file)
+  File.foreach(file){|student| puts student}
 end
 
 def find(name, id)
