@@ -1,3 +1,4 @@
+require_relative 'Lab4.rb'
 load 'Resource.rb'
 
 class PostsController
@@ -39,7 +40,7 @@ class PostsController
     @posts << post
 
     puts "Index of your post: #{@posts.find_index(post)}"
-    puts "TExt of your post: #{post}"
+    puts "Text of your post: #{post}"
   end
 
   def update
