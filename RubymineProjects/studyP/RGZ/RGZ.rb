@@ -32,6 +32,20 @@ def odd_first_even_second (arr)
   puts ""
 end
 
+def digit_sum (num)
+  numb = num
+  result = 0
+  if num < 10
+    puts num
+  end
+  while num > 0 do
+    result += (num % 10)
+    num = num / 10
+  end
+  puts "Сумма цифр числа #{numb} = #{result}"
+end
+
 even_first_odd_second(numbers)
 odd_first_even_second(numbers)
+digit_sum(319)
 
